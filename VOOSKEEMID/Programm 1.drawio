@@ -1,0 +1,75 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="Qohz8JkAVTxOjq1C_BE_">
+    <mxGraphModel dx="565" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-2" value="//1. kirjuta programm, mis&#xa;            ✅//omab täisarvu muutujat vanuse jaoks&#xa;            ✅//küsib kasutajalt tema vanust. int.Parse() üritab muuta andmeid tekstist arvuks&#xa;            ✅//omab täisarvu muutujat aastaarvu jaoks&#xa;            ✅//küsib kasutajalt praegust kalendriaastat. int.Parse() üritab muuta andmeid tekstist arvuks&#xa;            ✅//omab muutujat sünniaasta jaoks, siia sisse omimstatakse tehte tulemus, kus aastaarvust lahutatakse vanus" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="2310" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-3" target="2UNWgojEbjmqFyzlQYLC-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-3" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="950" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-4" target="2UNWgojEbjmqFyzlQYLC-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-4" value="Tee täisarvu muutuja vanuse jaoks kuhu sisse omistame algväärtuse &quot;&quot;." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1120" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-6" target="2UNWgojEbjmqFyzlQYLC-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-6" value="Küsi kasutajalt vanust &quot;Tere, kui vana te olete&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1260" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-10" target="2UNWgojEbjmqFyzlQYLC-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-10" value="Tekita täisarvu muutuja &quot;aastaarv&quot; jaoks kuhu omistatakse algväärtus &quot;&quot;." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1560" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-14" target="2UNWgojEbjmqFyzlQYLC-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-14" value="Oota kasutaja vastust ja omista see täisarvu muutujasse &quot;vanus&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1410" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-17" target="2UNWgojEbjmqFyzlQYLC-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-17" value="Küsi kasutajalt praegust aastat &quot;Sisesta siia hetkene kalendriaasta&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1700" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-19" target="2UNWgojEbjmqFyzlQYLC-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="1950" />
+              <mxPoint x="590" y="1950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-19" value="Oota kasutaja vastust ja omista see väärtusesse &quot;aastaarv&quot; ja&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1850" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-21" target="2UNWgojEbjmqFyzlQYLC-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-21" value="Tekita täisarvu muutuja &quot;sünniaasta&quot; kuhu omistatakse aastarvu ja vanus lahutuse tulemus" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="1990" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2UNWgojEbjmqFyzlQYLC-23" target="2UNWgojEbjmqFyzlQYLC-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-23" value="Kuva kasutajale tekst &quot;olete sündinud aastal &quot;sünniaasta&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="2110" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2UNWgojEbjmqFyzlQYLC-25" value="Lõpp" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="2210" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
