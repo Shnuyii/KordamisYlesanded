@@ -21,6 +21,27 @@
             //Console.WriteLine($"Olete edukalt sisse logitud, {kasutajaNimi}");
 
             //Programm 3
+
+
+
+
+            //* Suunakood *//
+            int suunakood = 0;
+            Console.WriteLine("Palun sisesta oma suunakood");
+            suunakood = int.Parse(Console.ReadLine());
+            if (suunakood > 9999 && suunakood < 100000)
+            {
+                Console.WriteLine("Ahha nüüd tean kus sa elad");
+            }
+            else if (suunakood <= 9999)
+            {
+                Console.WriteLine("Üks täht on puudu");
+            }
+            else
+            {
+                Console.WriteLine("Üks täht on üle");
+            }
+
         }
     }
 }
