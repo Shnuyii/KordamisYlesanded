@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="C:\Users\opilane\source\repos\LOGITge25\Christopher\KordamisYlesanded\OMISTAMISE ANDMETÜÜBID SISEND VÄLJUND MUUTUJA\DO WHILE\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
 </Project>
