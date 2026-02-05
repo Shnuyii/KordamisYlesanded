@@ -1,0 +1,69 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="IJEBjkcIgEMA8hAZUwDR">
+    <mxGraphModel dx="2435" dy="2392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-1" target="NGEFUu4KA06KYgRfvX8a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-1" value="Algus" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-1820" y="-1080" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-2" target="NGEFUu4KA06KYgRfvX8a-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1760" y="-790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-2" value="Tekita nimisõna muutuja &quot;nimi&quot; mille algväärtuseks on &quot;Nipitiri&quot;." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="-1850" y="-930" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-6" target="NGEFUu4KA06KYgRfvX8a-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-6" value="Kuva kasutajale tekst &quot;Mis on sinu nimi?&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="-1835" y="-800" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-7" target="NGEFUu4KA06KYgRfvX8a-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-7" value="Oota kasutaja vastust" style="whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="-1820" y="-660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-9" target="NGEFUu4KA06KYgRfvX8a-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-13" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NGEFUu4KA06KYgRfvX8a-12">
+          <mxGeometry x="-0.2098" y="2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-9" target="NGEFUu4KA06KYgRfvX8a-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1760" y="-370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1760" y="-350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-16" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NGEFUu4KA06KYgRfvX8a-15">
+          <mxGeometry x="-0.0889" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-9" value="Kas kasutaja poolt sisestatund väärtus on võrdne muutuja &quot;nimi&quot; väärtusega?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+          <mxGeometry x="-1857.5" y="-540" width="195" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NGEFUu4KA06KYgRfvX8a-11" target="NGEFUu4KA06KYgRfvX8a-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-11" value="kuva kasutajale tekst &quot;Teie sisestatud nimi pole õige&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="-1570" y="-530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NGEFUu4KA06KYgRfvX8a-17" value="Lõpp" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-1570" y="-390" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
