@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Leht-1" id="1YTJ295CvTxChFmNuOi4">
+    <mxGraphModel dx="3520" dy="2903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-1" target="k3-bI_0oNlhRcr7Ab172-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-1" value="Algus" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1800" y="-1110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-3" value="// 1. &quot;prindi numbrid&quot;&#xa;// tee muutuja &quot;kuipalju&quot; milles on täisarv 0 &#xa;// kuva kasutajale tekst millega küsid kasutajalt mitu numbrit ta tahab&#xa;// omista käsurealt saadud arv muutujasse &quot;kuipalju&quot;&#xa;// kirjuta for tsükkel, tsükli teise parameetrisse - kontrolli aseta i vastu muutuja &quot;kuipalju&quot;&#xa;// tsükli tegevusena kuva kasutajale välja i, aga liida sellele üks juurde et lugemine algaks arvust 1&#xa;// peale tsüklit kuva kasutajale sõnum &quot;tsükkel lõppes&quot;" style="" vertex="1" parent="1">
+          <mxGeometry x="-2030" y="-130" width="500" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-4" target="k3-bI_0oNlhRcr7Ab172-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-4" value="tekita täisarvu muutuja &quot;kuiPaljuOn&quot; mille algväärtuseks omistatakse 0." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1830" y="-940" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-6" target="k3-bI_0oNlhRcr7Ab172-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-6" value="Kuva kasutajale tekst &quot;Tere, mitu numbrit soovite?&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1840" y="-800" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-8" target="k3-bI_0oNlhRcr7Ab172-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-8" value="Oota kasutaja sisestust mille väärtus omistatakse muutujasse &quot;kuiPaljuOn&quot;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1815" y="-660" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-10" target="k3-bI_0oNlhRcr7Ab172-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-10" value="tekita for tsükkel, kus täisarvu muutuja &quot;i&quot; algväärtuseks on 0, iga tsükliga liidetakse juurde 1 ja tsükkel kestab seni kuni &quot;i&quot; väärtus on väiksem kui muutuja &quot;kuiPaljuOn&quot; väärtus" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1872.5" y="-520" width="265" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-12" target="k3-bI_0oNlhRcr7Ab172-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-16" value="JAH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="k3-bI_0oNlhRcr7Ab172-15">
+          <mxGeometry x="0.0154" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-12" target="k3-bI_0oNlhRcr7Ab172-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-20" value="EI" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="k3-bI_0oNlhRcr7Ab172-19">
+          <mxGeometry x="-0.1455" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-12" value="kas muutuja &quot;i&quot; väärtus on väiksem kui muutuja &quot;kuiPaljuOn&quot; väärtus?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1510" y="-525" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-14" target="k3-bI_0oNlhRcr7Ab172-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1530" y="-620" />
+              <mxPoint x="-1530" y="-485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-14" value="kuva kasutajale muutuja &quot;i&quot; väärtus ja liida muutujale 1 juurde" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1515" y="-650" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="k3-bI_0oNlhRcr7Ab172-18" target="k3-bI_0oNlhRcr7Ab172-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-18" value="kuva kasutajale tekst &quot;Tsükkel lõppes&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1250" y="-515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3-bI_0oNlhRcr7Ab172-21" value="Lõpp" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1030" y="-525" width="130" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
