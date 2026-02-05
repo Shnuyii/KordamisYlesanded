@@ -14,24 +14,22 @@
             // tsükli tegevusena kuva kasutajale välja i, aga liida sellele üks juurde et lugemine algaks arvust 1
             // peale tsüklit kuva kasutajale sõnum "tsükkel lõppes"
 
-            int kuiPaljuOn = 0;
-            Console.WriteLine("Tere, mitu numbrit soovite?");
-            kuiPaljuOn = int.Parse(Console.ReadLine());
-            if (kuiPaljuOn > 0)
-            {
-                for (int i = 0; i < kuiPaljuOn; i++)
-                {
-                    Console.WriteLine(i+1);
-                }
-                Console.WriteLine("Tsükkel lõppes.");
-            }
-            else
-            {
-                Console.WriteLine("Palun sisestada number suurem kui 0");
-                Console.WriteLine("Tsükkel lõppes.");
-            }
-            
-
+            //int kuiPaljuOn = 0;
+            //Console.WriteLine("Tere, mitu numbrit soovite?");
+            //kuiPaljuOn = int.Parse(Console.ReadLine());
+            //if (kuiPaljuOn > 0)
+            //{
+            //    for (int i = 0; i < kuiPaljuOn; i++)
+            //    {
+            //        Console.WriteLine(i+1);
+            //    }
+            //    Console.WriteLine("Tsükkel lõppes.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Palun sisestada number suurem kui 0");
+            //    Console.WriteLine("Tsükkel lõppes.");
+            //}
 
             // 2. "Ruut"
             // tee muutuja "ruudukülg" milles on täisarv 0
@@ -43,6 +41,20 @@
             // nüüd sisemise tsükli sees, omista muutujale "seeRida" juurde liites sisse väärtus "HH" 
             // kui sisemine tsükkel on lõpetanud, siis kuva kasutajale see rida välja
             // kui ka esimene tsükkel on lõpetanud, siis kuva kasutajale tekst "tsüklid on lõpetanud"
+
+            int ruudukülg = 0;
+            Console.WriteLine("Kui suurt ruutu soovite?");
+            ruudukülg = int.Parse(Console.ReadLine());
+            for (int i = 0; i < ruudukülg; i++)
+            {
+                string seerida = "";
+                for (int j = 0; j < ruudukülg; j++)
+                {
+                    seerida += "HH";
+                }
+                Console.WriteLine(seerida);
+            }
+            Console.WriteLine("Tsüklid on lõppenud");
         }
     }
 }
