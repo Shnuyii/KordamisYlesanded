@@ -85,99 +85,99 @@ namespace General
             // siis küsitakse kas kasutaja tahab mõne marja kohta veel infot, ning tsükkel jätkub
             // ⭐iseseisvalt lisa juurde puude tuvastamine ⭐
 
-            bool anuddaJuan = true;
-            string mida = string.Empty;
-            List<string> valikud = new List<string>() { "seent", "marja","puud"};
-            List<string> seeneNimed = new List<string> { "kukeseen", "puravik", "sitaseen" };
-            List<string> seeneInfod = new List<string>
-            {
-                "kukeseen on kollane ja maitsev",
-                "puravik on pruun ja maitse poolest halvem kui kukeseen",
-                "sitaseen ei ole hea, ära korja"
-            };
-            List<string> marjaNimed = new List<string> { "maasikas", "vaarikas", "mustikas" };
-            List<string> marjaInfod = new List<string>
-            {
-                "Maasikas on magus ja punane",
-                "Vaarikas on magushapu ja maitse, kuid tal on seemned",
-                "Mustikas on sinine ja magus ning pehme"
-            };
-            List<string> puudeNimed = new List<string> { "kask", "kuusk", "tamm" };
-            List<string> puudeInfod = new List<string>
-            {
-                "kask on valge ja huvitav",
-                "kuusk on jõuludeks väga tore puu :)",
-                "tamm on suur ja tume"
-            };
-            while (anuddaJuan == true)
-            {
-                do
-                {
-                    Console.WriteLine("Kas sa otsid seent, marja või puud? Valimiseks palun sisestage 'seent', 'marja' või 'puud'.");
-                    mida = Console.ReadLine();
-                }
-                //while (mida != "seent")
-                //while (!new List<string>() { "seent", "marja", "seeni", "marju"}.Contains(mida));
-                while (!valikud.Contains(mida));
-                {
-                    if (mida == "seent")
-                    {
-                        List<int> seeneValikud = new List<int>() { 1, 2, 3 };
-                        int seeneArv = 0;
-                        do
-                        {
-                            Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + seeneNimed.Count + " tükki. Valimiseks sisestage vastav number.");
-                            for (int i = 0; i < seeneInfod.Count; i++)
-                            {
-                                Console.WriteLine(i + 1 + ". " + seeneNimed.ElementAt(i));
-                            }
-                            seeneArv = int.Parse(Console.ReadLine());
-                        } while (!seeneValikud.Contains(seeneArv));
+            //bool anuddaJuan = true;
+            //string mida = string.Empty;
+            //List<string> valikud = new List<string>() { "seent", "marja","puud"};
+            //List<string> seeneNimed = new List<string> { "kukeseen", "puravik", "sitaseen" };
+            //List<string> seeneInfod = new List<string>
+            //{
+            //    "kukeseen on kollane ja maitsev",
+            //    "puravik on pruun ja maitse poolest halvem kui kukeseen",
+            //    "sitaseen ei ole hea, ära korja"
+            //};
+            //List<string> marjaNimed = new List<string> { "maasikas", "vaarikas", "mustikas" };
+            //List<string> marjaInfod = new List<string>
+            //{
+            //    "Maasikas on magus ja punane",
+            //    "Vaarikas on magushapu ja maitse, kuid tal on seemned",
+            //    "Mustikas on sinine ja magus ning pehme"
+            //};
+            //List<string> puudeNimed = new List<string> { "kask", "kuusk", "tamm" };
+            //List<string> puudeInfod = new List<string>
+            //{
+            //    "kask on valge ja huvitav",
+            //    "kuusk on jõuludeks väga tore puu :)",
+            //    "tamm on suur ja tume"
+            //};
+            //while (anuddaJuan == true)
+            //{
+            //    do
+            //    {
+            //        Console.WriteLine("Kas sa otsid seent, marja või puud? Valimiseks palun sisestage 'seent', 'marja' või 'puud'.");
+            //        mida = Console.ReadLine();
+            //    }
+            //    //while (mida != "seent")
+            //    //while (!new List<string>() { "seent", "marja", "seeni", "marju"}.Contains(mida));
+            //    while (!valikud.Contains(mida));
+            //    {
+            //        if (mida == "seent")
+            //        {
+            //            List<int> seeneValikud = new List<int>() { 1, 2, 3 };
+            //            int seeneArv = 0;
+            //            do
+            //            {
+            //                Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + seeneNimed.Count + " tükki. Valimiseks sisestage vastav number.");
+            //                for (int i = 0; i < seeneInfod.Count; i++)
+            //                {
+            //                    Console.WriteLine(i + 1 + ". " + seeneNimed.ElementAt(i));
+            //                }
+            //                seeneArv = int.Parse(Console.ReadLine());
+            //            } while (!seeneValikud.Contains(seeneArv));
 
-                        Console.WriteLine(seeneInfod.ElementAt(seeneArv - 1));
-                    }
-                    else if (mida == "marja")
-                    {
-                        List<int> marjaValikud = new List<int>() { 1, 2, 3 };
-                        int marjaArv = 0;
-                        do
-                        {
-                            Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + marjaNimed.Count + " tükki. Valimiseks sisestage vastav number.");
-                            for (int i = 0; i < marjaInfod.Count; i++)
-                            {
-                                Console.WriteLine(i + 1 + ". " + marjaNimed.ElementAt(i));
-                            }
-                            marjaArv = int.Parse(Console.ReadLine());
-                        } while (!marjaValikud.Contains(marjaArv));
+            //            Console.WriteLine(seeneInfod.ElementAt(seeneArv - 1));
+            //        }
+            //        else if (mida == "marja")
+            //        {
+            //            List<int> marjaValikud = new List<int>() { 1, 2, 3 };
+            //            int marjaArv = 0;
+            //            do
+            //            {
+            //                Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + marjaNimed.Count + " tükki. Valimiseks sisestage vastav number.");
+            //                for (int i = 0; i < marjaInfod.Count; i++)
+            //                {
+            //                    Console.WriteLine(i + 1 + ". " + marjaNimed.ElementAt(i));
+            //                }
+            //                marjaArv = int.Parse(Console.ReadLine());
+            //            } while (!marjaValikud.Contains(marjaArv));
 
-                        Console.WriteLine(marjaInfod.ElementAt(marjaArv - 1));
-                    }
-                    else
-                    {
-                        List<int> puudeValikud = new List<int>() { 1, 2, 3 };
-                        int puudeArv = 0;
-                        do
-                        {
-                            Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + puudeNimed.Count + " tükki. Valimiseks sisestage vastav number.");
-                            for (int i = 0; i < puudeInfod.Count; i++)
-                            {
-                                Console.WriteLine(i + 1 + ". " + puudeNimed.ElementAt(i));
-                            }
-                            puudeArv = int.Parse(Console.ReadLine());
-                        } while (!puudeValikud.Contains(puudeArv));
+            //            Console.WriteLine(marjaInfod.ElementAt(marjaArv - 1));
+            //        }
+            //        else
+            //        {
+            //            List<int> puudeValikud = new List<int>() { 1, 2, 3 };
+            //            int puudeArv = 0;
+            //            do
+            //            {
+            //                Console.WriteLine("Palun vali seen, mille kohta tahad infot, valikus on " + puudeNimed.Count + " tükki. Valimiseks sisestage vastav number.");
+            //                for (int i = 0; i < puudeInfod.Count; i++)
+            //                {
+            //                    Console.WriteLine(i + 1 + ". " + puudeNimed.ElementAt(i));
+            //                }
+            //                puudeArv = int.Parse(Console.ReadLine());
+            //            } while (!puudeValikud.Contains(puudeArv));
 
-                        Console.WriteLine(puudeInfod.ElementAt(puudeArv - 1));
-                    }
-                }
-                Console.WriteLine("Kas soovite veel mingit infot? jah/ei");
-                string kasutajaVastus = Console.ReadLine();
-                if (kasutajaVastus == "jah")
-                {
-                    anuddaJuan = true;
-                }
-                else
-                {  anuddaJuan = false; }
-            }
+            //            Console.WriteLine(puudeInfod.ElementAt(puudeArv - 1));
+            //        }
+            //    }
+            //    Console.WriteLine("Kas soovite veel mingit infot? jah/ei");
+            //    string kasutajaVastus = Console.ReadLine();
+            //    if (kasutajaVastus == "jah")
+            //    {
+            //        anuddaJuan = true;
+            //    }
+            //    else
+            //    {  anuddaJuan = false; }
+            //}
 
             // #n4. "Stonksid"
             // kirjuta programm mis töötab tsüklis ja omab tehtavat koodi mis:
@@ -192,6 +192,19 @@ namespace General
             // kui kasutaja portfell pole jõudnud alla nulli, siis kasutaja saab valida kas investeerida uuesti või mitte
             // kui aga portfell on nullis, öeldakse kasutajale et on pankrotis
             // kuvatakse kasutajale tema portfelli lõppväärtus.
+
+            int summa = 0;
+            List<string> firma = new List<string> { "Tesla", "TransferWise", "Microslop" };
+            string investment = string.Empty;
+            while (summa > 0)
+            {
+                Console.WriteLine("Palun sisestage oma investeeritav summa.");
+                summa = int.Parse(Console.ReadLine());
+            }
+            do
+            { 
+            
+            }
         }
     }
 }
