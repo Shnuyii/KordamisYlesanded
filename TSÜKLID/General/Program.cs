@@ -1,4 +1,6 @@
-﻿namespace General
+﻿using System.ComponentModel.Design;
+
+namespace General
 {
     internal class Program
     {
@@ -16,31 +18,31 @@
             // - - küsitakse uuesti tühja sisendi korral
             // - ning väljastab talle tervituslause, kasutades kõiki muutujaid
 
-            string eesNimi = string.Empty;
-            while (eesNimi == string.Empty)
-            {
-                Console.WriteLine("Palun sisesta oma nimi siia");
-                eesNimi = Console.ReadLine();
-            }
-            string keskmineNimi = string.Empty;
-            while (keskmineNimi == string.Empty)
-            {
-                Console.WriteLine("Palun sisesta oma kesmine nimi siia");
-                keskmineNimi = Console.ReadLine();
-            }
-            string perekonnaNimi = string.Empty;
-            while (perekonnaNimi == string.Empty)
-            {
-                Console.WriteLine("Palun sisesta oma perekonnanimi siia");
-                perekonnaNimi= Console.ReadLine();
-            }
-            int vanus = 0;
-            while (vanus < 1)
-            {
-                Console.WriteLine("Palun sisesta oma vanus");
-                vanus = int.Parse(Console.ReadLine());
-            }
-            Console.WriteLine($"Tere {eesNimi} {perekonnaNimi}! Või kutsun teid kui {keskmineNimi}? Oled tublisti kasvanud, oled {vanus} aastane.");
+            //string eesNimi = string.Empty;
+            //while (eesNimi == string.Empty)
+            //{
+            //    Console.WriteLine("Palun sisesta oma nimi siia");
+            //    eesNimi = Console.ReadLine();
+            //}
+            //string keskmineNimi = string.Empty;
+            //while (keskmineNimi == string.Empty)
+            //{
+            //    Console.WriteLine("Palun sisesta oma kesmine nimi siia");
+            //    keskmineNimi = Console.ReadLine();
+            //}
+            //string perekonnaNimi = string.Empty;
+            //while (perekonnaNimi == string.Empty)
+            //{
+            //    Console.WriteLine("Palun sisesta oma perekonnanimi siia");
+            //    perekonnaNimi= Console.ReadLine();
+            //}
+            //int vanus = 0;
+            //while (vanus < 1)
+            //{
+            //    Console.WriteLine("Palun sisesta oma vanus");
+            //    vanus = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine($"Tere {eesNimi} {perekonnaNimi}! Või kutsun teid kui {keskmineNimi}? Oled tublisti kasvanud, oled {vanus} aastane.");
 
             // #n2. "Minu lemmiksnäkk"
             // kirjuta programm mis
@@ -48,6 +50,27 @@
             // programm kontrollib tsükliga kas järjendis on snäkk olemas
             // kui tsüklis leitakse snäkk, kuva tekst koos kasutajasisendiga, "jaa :D tean seda, {snäkk} on hea"
             // kui tsükkel lõppeb ilma snäkki leidmata, kuva tekst "ei tunne kahjuks {snäkk}i :C"
+
+            List<string> snäkid = new List<string>() {"krõpsud", "kummikommid", "präänikud" };
+            string kasutajaleMeeldib = string.Empty;
+            bool isPresent = false;
+            while (isPresent != true)
+            {
+                Console.WriteLine("Sisesta oma lemmiksnäkk");
+                kasutajaleMeeldib = Console.ReadLine();
+                foreach (var snäkk in snäkid)
+                {
+                    if (snäkk == kasutajaleMeeldib)
+                    {
+                        isPresent = true;
+                    }
+                }
+                if (isPresent == true)
+                {
+                    Console.WriteLine($"jaa :D tean seda, {kasutajaleMeeldib} on hea");
+                }
+                else { Console.WriteLine($"ei tunne kahjuks {kasutajaleMeeldib} :c"); }
+            }
 
             // #n3. "Metsataimede välimääraja"
             // kirjuta programm mis
