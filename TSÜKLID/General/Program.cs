@@ -194,61 +194,137 @@ namespace General
             // kui aga portfell on nullis, öeldakse kasutajale et on pankrotis
             // kuvatakse kasutajale tema portfelli lõppväärtus.
 
-            bool investeeringUuesti = true;
-            float portfell = 1;
-            float summa = 0;
-            List<string> firmad = new List<string> { "Tesla", "TransferWise", "Microslop" };
-            Random juhuArv = new Random();
-            string investment = string.Empty;
-            while (investeeringUuesti != false && portfell > 0)
-            {
-                int firmaNumber = 0;
-                int päevad = 0;
-                Console.WriteLine("Palun sisestage oma investeeritav summa.");
-                summa = int.Parse(Console.ReadLine());
-                portfell = summa;
-                Console.WriteLine("Kuhu soovite investeerida?");
-                for (int i = 0; i < firmad.Count; i++)
-                {
-                    Console.WriteLine(i + 1 + ". " + firmad.ElementAt(i));
-                }
-                firmaNumber = int.Parse(Console.ReadLine());
-                Console.WriteLine("Kui pikaks ajaks soovite investeerida?");
-                päevad = int.Parse(Console.ReadLine());
-                if (firmad.Contains(firmad.ElementAt(firmaNumber-1)))
-                    while (päevad > 0)
-                    if (investment == "Tesla")
-                        {
-                            float Tesla = -1.15f;
+            //bool investeeringUuesti = true;
+            //float portfell = 1;
+            //float summa = 0;
+            //List<string> firmad = new List<string> { "Tesla", "TransferWise", "Microslop" };
+            //Random juhuArv = new Random();
+            //string investment = string.Empty;
+            //while (investeeringUuesti != false && portfell > 0)
+            //{
+            //    int firmaNumber = 0;
+            //    int päevad = 0;
+            //    Console.WriteLine("Palun sisestage oma investeeritav summa.");
+            //    summa = int.Parse(Console.ReadLine());
+            //    portfell = summa;
+            //    Console.WriteLine("Kuhu soovite investeerida?");
+            //    for (int i = 0; i < firmad.Count; i++)
+            //    {
+            //        Console.WriteLine(i + 1 + ". " + firmad.ElementAt(i));
+            //    }
+            //    firmaNumber = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Kui pikaks ajaks soovite investeerida?");
+            //    päevad = int.Parse(Console.ReadLine());
+            //    if (firmad.Contains(firmad.ElementAt(firmaNumber-1)))
+            //        while (päevad > 0)
+            //        if (investment == "Tesla")
+            //            {
+            //                float Tesla = -1.15f;
 
-                            portfell = portfell - (portfell * Tesla);
-                            Console.WriteLine($"Tänane  kordaja on {firmad[0]} ja teie hetke portfelli seis on {portfell}");
-                            päevad--;
-                        }
-                    else if (investment == "TransferWise")
-                        {
-                            int TransferWise = (juhuArv.Next(1, 100) / 1000) + 1;
-                            portfell = portfell / TransferWise;
-                            Console.WriteLine($"Tänane {firmad[1]} kordaja on {TransferWise} ja teie hetke portfelli seis on {portfell}");
-                            päevad--;
-                        }
-                    else
-                        {
-                            int MicroSlop = (juhuArv.Next(-100, -1) / 1000) + 1;
-                            portfell = portfell / MicroSlop;
-                            Console.WriteLine($"Tänane {firmad[2]} kordaja on {MicroSlop} ja teie hetke portfelli seis on {portfell}");
-                            päevad--;
-                        }
-                if (portfell > 0)
+            //                portfell = portfell - (portfell * Tesla);
+            //                Console.WriteLine($"Tänane  kordaja on {firmad[0]} ja teie hetke portfelli seis on {portfell}");
+            //                päevad--;
+            //            }
+            //        else if (investment == "TransferWise")
+            //            {
+            //                int TransferWise = (juhuArv.Next(1, 100) / 1000) + 1;
+            //                portfell = portfell / TransferWise;
+            //                Console.WriteLine($"Tänane {firmad[1]} kordaja on {TransferWise} ja teie hetke portfelli seis on {portfell}");
+            //                päevad--;
+            //            }
+            //        else
+            //            {
+            //                int MicroSlop = (juhuArv.Next(-100, -1) / 1000) + 1;
+            //                portfell = portfell / MicroSlop;
+            //                Console.WriteLine($"Tänane {firmad[2]} kordaja on {MicroSlop} ja teie hetke portfelli seis on {portfell}");
+            //                päevad--;
+            //            }
+            //    if (portfell > 0)
+            //    {
+            //        Console.WriteLine($"Teie hetke portfelli summa on {portfell}");
+            //        Console.WriteLine("Kas soovite uuesti investeerida?");
+            //        string vastus = "";
+            //        vastus = Console.ReadLine();
+            //        if (vastus == "jah")
+            //        { investeeringUuesti = true; }
+            //        else
+            //        { investeeringUuesti = false; }
+            //}
+            //}
+
+            float investment = 1.0f;
+            Random generator = new Random();
+            float teslaRate = -1.15f;
+            float msRate = 0f;
+            float wiseRate = 0f;
+            bool reinvest = true;
+            string kasutajaVastus = "jah";
+            while (reinvest != false && investment > 0)
+            {
+                do
                 {
-                    Console.WriteLine($"Teie hetke portfelli summa on {portfell}");
-                    Console.WriteLine("Kas soovite uuesti investeerida?");
-                    string vastus = "";
-                    vastus = Console.ReadLine();
-                    if (vastus == "jah")
-                    { investeeringUuesti = true; }
+                    Console.WriteLine("Palun sisesta summa mida soovid investeerida.");
+                    investment = float.Parse(Console.ReadLine());
+                } while (investment <= 0f);
+                List<string> companies = new List<string>() { "Tesla", "Transferwise", "Microslop"};
+                string userOption = "";
+                do
+                {
+                    Console.WriteLine( "Palun sisesta ka firma mille aktsasse soovid investeerida, kirjuta firma nimi.");
+                    foreach (var company in companies)
+                    {
+                        Console.WriteLine(" - "+company);
+                    }
+                    userOption = Console.ReadLine();
+
+                } while (companies.Contains(userOption));
+                int investmentDays = 0;
+                do
+                {
+                    Console.WriteLine("Palun sisesta mitu päeva soovid oma investeeringut portfellis hoida");
+                    investmentDays = int.Parse(Console.ReadLine());
+                } while (investmentDays < 0);
+                int i = 0;
+                float cycleRate = 0f;
+                
+                while (i < investmentDays)
+                {
+                    int fixture = generator.Next(1,100);
+                    float result = fixture / 1000 + 1;
+                    wiseRate = result;
+                    msRate = result - result * 2;
+                switch (userOption)
+                {
+                    case "tesla":
+                        cycleRate = teslaRate;
+                        break;
+                    case "microslop":
+                        cycleRate = msRate;
+                        break;
+                    case "transferwise":
+                        cycleRate = wiseRate;
+                        break;
+                }
+                    investment *= cycleRate;
+                    Console.WriteLine((i+1)+". päeva tulemus: Firma - "+ userOption+" aktsia muutus kordajaga: "+cycleRate+"\n Sinu portfellist on alles "+investment+" eurot.");
+                    i++;
+                }
+                if (investment > 0)
+                {
+                    Console.WriteLine("Kas tahad uuesti investeerida? Sinu portfell on hetkel väärt: " + investment);
+                    kasutajaVastus = Console.ReadLine();
+                    if (kasutajaVastus == "jah")
+                    {
+                        reinvest = true;
+                    }
                     else
-                    { investeeringUuesti = false; }
+                    {
+                        reinvest = false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Oled BROKE");
                 }
             }
         }
