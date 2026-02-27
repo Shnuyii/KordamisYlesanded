@@ -23,7 +23,14 @@ namespace _5___MethodBasic
             int kasutajaValik = GetInput(new List<int>{1,2});
             if (kasutajaValik == 1)
             {
-                NewMethod(koodid, kontod, pinKood);
+                Console.WriteLine("Kui palju soovite välja võtta?");
+                double väljaSumma = double.Parse(Console.ReadLine());
+                while (väljaSumma < 0)
+                {
+                    Console.WriteLine("Negatiivset arvu välja võtta ei saa, proovi uuesti: ");
+                    väljaSumma = double.Parse(Console.ReadLine()) ;
+                }
+                VäljaVõte(pinKood, koodid, kontod, väljaSumma);
             }
             else if (kasutajaValik == 2)
             {
@@ -37,18 +44,6 @@ namespace _5___MethodBasic
                 RahaSisestus(pinKood, koodid, kontod, sisestus);
             }
                 EsitaKontoJääk(pinKood, koodid, kontod);
-        }
-
-        private static void NewMethod(List<int> koodid, List<double> kontod, int pinKood)
-        {
-            Console.WriteLine("Kui palju soovite välja võtta?");
-            double väljaSumma = double.Parse(Console.ReadLine());
-            while (väljaSumma < 0)
-            {
-                Console.WriteLine("Negatiivset arvu välja võtta ei saa, proovi uuesti: ");
-                väljaSumma = double.Parse(Console.ReadLine());
-            }
-            VäljaVõte(pinKood, koodid, kontod, väljaSumma);
         }
 
         private static List<double> RahaSisestus(int filter, List<int> accounts, List<double> balances, double sisestus)
