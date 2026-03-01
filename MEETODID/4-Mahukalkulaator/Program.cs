@@ -1,6 +1,7 @@
 ﻿
 
 
+
 namespace _4_Mahukalkulaator
 {
     internal class Program
@@ -60,9 +61,11 @@ namespace _4_Mahukalkulaator
             }
             else if (kasutajaValik == 2)
             {
+                int vaadiPõhi = 0;
+                int vaadiKõrgus = 0;
                 int kaanePaksus = 0;
                 Console.WriteLine("Kaanega või kaaneta? Valimiseks sisesta number.");
-                string[] kaaneValik = new string[] { "Kaanega", "Kaaneta" };
+                string[] kaaneValik = new string[] { "Kaaneta", "Kaanega" };
                 for (i = 0; i < kaaneValik.Length; i++)
                 {
                     Console.WriteLine((i + 1) + ". " + kaaneValik.ElementAt(i));
@@ -70,13 +73,34 @@ namespace _4_Mahukalkulaator
                 kasutajaValik = GetIntInput(new List<int> { 1, 2 });
                 if (kasutajaValik == 1)
                 {
-                    
+                    Console.WriteLine("Sisesta oma tünni põhja läbimõõt: ");
+                    vaadiPõhi = GetInPut() / 2;
+                    Console.WriteLine("Sisesta oma tünni kõrgus: ");
+                    vaadiKõrgus = GetInPut();
+                    int kaanegaVaat = SilindriRuumala(vaadiPõhi, vaadiKõrgus);
+                    Console.WriteLine($"{kaanegaVaat}");
                 }
                 if (kasutajaValik == 2)
                 {
-                    
+                    Console.WriteLine("Sisesta oma tünni põhja läbimõõt: ");
+                    vaadiPõhi = GetInPut() / 2;
+                    Console.WriteLine("Sisesta oma tünni kõrgus: ");
+                    vaadiKõrgus = GetInPut();
+                    Console.WriteLine("Sisesta oma tünni kaane paksus: ");
+                    kaanePaksus = GetInPut();
+                    vaadiKõrgus = vaadiKõrgus - kaanePaksus;
+                    int kaanetaVaat = SilindriRuumala(vaadiPõhi, vaadiKõrgus);
+                    Console.WriteLine($"{kaanetaVaat}");
                 }
             }
+        }
+
+        private static int SilindriRuumala(int põhi, int kõrgus)
+        {
+            double vastus = 0.0d;
+            double põhi2 = põhi;
+            vastus = Math.PI * Math.Pow(põhi2, 2) * kõrgus;
+            return (int)vastus;
         }
 
         private static int KastiArvutus(int valik, int üksKülg, int? teineKülg = 0)
