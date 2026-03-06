@@ -56,7 +56,23 @@
             //Console.WriteLine("Palun sisesta ka oma tänavanimi");
             //string tänavanimi = GetAnswer();
             //Console.WriteLine(kasutajanimi+" ahha! Elad "+tänavanimi+" tänaval");
-            VanusVastus();
+            //VanusVastus();
+            if (File.Exists("kasutajatänav.txt"))
+            {
+                string[] tervitus = File.ReadAllLines("kasutajatänav.txt");
+                Console.WriteLine(tervitus[0]);
+            }
+            else
+            {
+                Console.WriteLine("Sisesta oma nimi");
+                string kasutajaNimi = GetAnswer();
+                Console.WriteLine("Tere "+kasutajaNimi);
+                Console.WriteLine("Palun sisesta ka oma tänavanimi");
+                string tänavaNimi = GetAnswer();
+                string failiSisu = kasutajaNimi + " ahha! Elad " + tänavaNimi + " tänaval";
+                Console.WriteLine(failiSisu);
+                File.WriteAllText("kasutajatänav.txt", failiSisu);
+            }
         }
          
         private static void VanusVastus()
@@ -84,7 +100,7 @@
             do
             {
                 Console.WriteLine("Palun sisesta:");
-                Console.ReadLine();
+                input = Console.ReadLine();
             } while (input == "");
             return input;
         }
