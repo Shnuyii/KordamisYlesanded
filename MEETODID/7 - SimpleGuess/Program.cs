@@ -6,7 +6,9 @@ namespace _7___SimpleGuess
     {
         static void Main(string[] args)
         {
+            int floopaCoins = 0;
             int elud = 3;
+            Tuple<int,int> data = new Tuple<int, int>(elud, floopaCoins );
             Random juhuArv = new Random(); //Tekitab Random generaatori
             string mängijaMängib = "jah"; //vastus küsimusele, kas mängija mängib
             do //tsükkel
@@ -21,18 +23,24 @@ namespace _7___SimpleGuess
                     {
                         case 1:
                             Console.WriteLine("Kõnnid küla tee peal ja vastu tuleb elukas.");
-                            Console.WriteLine("Sul on alles " + elud + " elu.");
+                            Stats(elud, floopaCoins);
                             elud = Mõistatus(juhuArv, elud);
                             break;
                         case 2:
                             Console.WriteLine("Kõnnid küla tee peal ja vastu tuleb Nõid.");
-                            Console.WriteLine("Sul on alles " + elud + " elu.");
+                            Stats(elud, floopaCoins);
                             elud = Nõid(juhuArv, elud);
                             break;
                         case 3:
                             Console.WriteLine("Kõnnid metsas ja vastu tuleb seen.");
-                            Console.WriteLine("Sul on alles " + elud + " elu.");
+                            Stats(elud, floopaCoins);
                             elud = Seen(juhuArv, elud);
+                            break;
+                        case 4:
+                            Console.WriteLine("Kõnnid tänaval ja leiad Floppa");
+                            Stats(elud, floopaCoins);
+                            
+                            data = Floppa(data);
                             break;
                         default:
                             break;
@@ -53,6 +61,29 @@ namespace _7___SimpleGuess
                 }
                 
             } while (mängijaMängib == "jah");
+        }
+
+        private static Tuple<int,int> Floppa(Tuple<int,int> data)
+        {
+            int modifier1 = data.Item1;
+            Console.WriteLine("Mis soovid Floppaga teha?\n1 - Kaasa võtta \n2 - Tagastada omanikule \n3 - Maha jätta \nValimiseks sisesta number:");
+            int valik = 0;
+            switch (valik)
+            {
+                case 1:
+                    Console.WriteLine("Sa võttad Floppa kaasa ja saad endale 5 floopa coini");
+
+                    modifier1 += 5;
+                    break;
+            }
+            return data;
+
+        }
+
+        private static void Stats(int elud, int floopaCoins)
+        {
+            Console.WriteLine("Sul on alles " + elud + " elu.");
+            Console.WriteLine("Sul on rahakotis "+floopaCoins+" floopa coini");
         }
 
         private static int Seen(Random juhuArv, int elud)
