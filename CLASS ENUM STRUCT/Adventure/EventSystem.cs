@@ -59,9 +59,9 @@ namespace Adventure
             {
                 //kuva kasutajale asi, selle hind
                 Console.WriteLine($"On the shelf there is a {riiul[i]} and it costs {hinnad[i]}.");
-                Console.WriteLine("Kas sa tahad seda osta? (jah/ei)");
+                Console.WriteLine("Do you want to buy it? (Y/N)");
                 string vastus = Console.ReadLine();
-                if (vastus == "jah")
+                if (vastus == "Y")
                 {
                     if (hinnad[i] < player.Money)
                     {
@@ -71,15 +71,15 @@ namespace Adventure
                     }
                     else
                     {
-                        Console.WriteLine("Sul pole piisavalt raha selle jaoks, vaata midagi muud.");
+                        Console.WriteLine("Not enough money, too bad.");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Vaatad järgmist asja");
+                    Console.WriteLine("Viewing the next item.");
                 }
             }
-            Console.WriteLine("Lahkusid poest");
+            Console.WriteLine($"You left the shop.");
         }
 
         private static void Event5_Hill(Player player)

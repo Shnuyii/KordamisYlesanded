@@ -32,5 +32,21 @@ namespace Adventure
         public PlayerLocation Location { get; set; }
         public List<string> Backpack { get; set; }
         public int Money { get; set; } = 0;
+
+        public void DisplayStats()
+        {
+            Console.WriteLine($"You currently have {Lives} and {Health}.");
+            Console.WriteLine($"You are currently at {Location.ToString()} and have {Money} floppacoins.");
+            Console.WriteLine($"You are currently holding onto {string.Join(",",Backpack)}");
+        }
+
+        public void HealthCheck()
+        {
+            if (Health <= 0)
+            {
+                Lives -= 1;
+                Health = 100;
+            }
+        }
     }
 }

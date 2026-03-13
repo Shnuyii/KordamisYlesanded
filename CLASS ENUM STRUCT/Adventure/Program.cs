@@ -1,4 +1,6 @@
-﻿namespace Adventure
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Adventure
 {
     internal class Program
     {
@@ -16,6 +18,8 @@
             do
             {
                 Console.Clear();
+                Console.WriteLine("Your current stats:");
+                player.DisplayStats();
                 EventSystem.NextEncounter(player, rng);
                 Console.WriteLine("\nPress any button to continue.");
                 Console.ReadLine();
