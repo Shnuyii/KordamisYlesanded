@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adventure
 {
-    internal class Player
+    public class Player
     {
         public struct PlayerLocation
         {
