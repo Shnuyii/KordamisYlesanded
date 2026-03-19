@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static Adventure.Player;
 
 namespace Adventure
 {
@@ -11,20 +12,23 @@ namespace Adventure
             //     Andmeväljadel on: Lives, Health, Location (struct kus on X ja Y), Backpack, Money
             //     Vaikeväärtused on Lives (3) ja Health (100)
             Random rng = new Random();
-            Player player = new Player (3, 100, new Player.PlayerLocation(0,0), new List<string>(), 0);
+            Player player = new Player (3, 100, new PlayerLocation(0,0), new List<string>(), 0);
             string playAgain = "yes";
             Console.WriteLine("Welcome, press any button to play.");
             Console.ReadLine();
+            World map = new World("helloworld", player.Location, new PlayerLocation(6,8));
             do
             {
                 Console.Clear();
-                Console.WriteLine("Your current stats:");
+                Console.WriteLine("----------Your current stats----------");
                 player.DisplayStats();
-                EventSystem.NextEncounter(player, rng);
+                EventSystem.NextEncounter(player,map, rng);
+                EventSystem.NextLocation(player, map);
                 Console.WriteLine("\nPress any button to continue.");
                 Console.ReadLine();
                 if (player.Lives <= 0)
                 {
+                    Console.Clear();
                     Console.WriteLine("*----------* G A M E  O V E R *----------*\n\nPlay again?\nInsert 'yes' to play again:");
                     playAgain = Console.ReadLine();
                     if (playAgain == "yes")

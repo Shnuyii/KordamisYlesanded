@@ -17,6 +17,11 @@ namespace Adventure
             }
             public int X { get; set; } = 0;
             public int Y { get; set; } = 0;
+
+            public override string ToString()
+            {
+                return $"{X},{Y}";
+            }
         }
 
         public Player(int lives, int health, PlayerLocation location, List<string> backpack, int money)
@@ -35,7 +40,7 @@ namespace Adventure
 
         public void DisplayStats()
         {
-            Console.WriteLine($"You currently have {Lives} and {Health}.");
+            Console.WriteLine($"You currently have {Lives} lives and {Health} hp.");
             Console.WriteLine($"You are currently at {Location.ToString()} and have {Money} floppacoins.");
             Console.WriteLine($"You are currently holding onto {string.Join(",",Backpack)}");
         }
