@@ -256,20 +256,20 @@ namespace Adventure
             switch (response)
             {
                 case "N":
-                    player.Location = new PlayerLocation(player.Location.X, player.Location.Y - 1);
                     int nextLocationN = CheckCandidate(mapYmax, player.Location.Y - 1);
+                    player.Location = new PlayerLocation(player.Location.X, player.Location.Y - 1);
                     break;
                 case "S":
-                    player.Location = new PlayerLocation(player.Location.X, player.Location.Y + 1);
                     int nextLocationS = CheckCandidate(mapYmax, player.Location.Y + 1, true);
+                    player.Location = new PlayerLocation(player.Location.X, player.Location.Y + 1);
                     break;
                 case "W":
-                    player.Location = new PlayerLocation(player.Location.X - 1, player.Location.Y);
                     int nextLocationW = CheckCandidate(mapXmax, player.Location.X - 1);
+                    player.Location = new PlayerLocation(player.Location.X - 1, player.Location.Y);
                     break;
                 case "E":
-                    player.Location = new PlayerLocation(player.Location.X + 1, player.Location.Y);
                     int nextLocationE = CheckCandidate(mapXmax, player.Location.X + 1, true);
+                    player.Location = new PlayerLocation(player.Location.X + 1, player.Location.Y);
                     break;
                 default:
                     break;
