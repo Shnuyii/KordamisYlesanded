@@ -36,11 +36,16 @@ namespace Adventure
                 case 6:
                     Event6_Shop(player);
                     break;
+                case 7:
+                    Event7_EnemyDuel(player);
+                    break;
             }
         }
+
+
         public static void NextEncounter(Player player, Random rng)
         {
-            int nextEncounterInt = rng.Next(1, 7);
+            int nextEncounterInt = rng.Next(1, 8);
             switch (nextEncounterInt)
             {
                 case 1:
@@ -58,12 +63,19 @@ namespace Adventure
                 case 5:
                     Event5_Hill(player);
                     break;
-                case 6: 
+                case 6:
                     Event6_Shop(player);
+                    break;
+                case 7:
+                    Event7_EnemyDuel(player);
                     break;
             }
         }
 
+        private static void Event7_EnemyDuel(Player player)
+        {
+            return;
+        }
         private static void Event6_Shop(Player player)
         {
             List<string> riiul = new List<string>()

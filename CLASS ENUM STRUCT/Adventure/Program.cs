@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using static Adventure.Player;
+using static Adventure.Enemies;
 
 namespace Adventure
 {
@@ -17,6 +18,10 @@ namespace Adventure
             Console.ReadLine();
             World map = new World("helloworld", new PlayerLocation(3,9), new PlayerLocation(6,8));
             Player player = new Player (3, 100, map.StartingPoint , new List<string>(), 0);
+            List<Enemies> enemy = new List<Enemies>
+            {
+                new Enemies("V2", 20, 1, "Depr", 5),
+            };
             do
             {
                 Console.Clear();
@@ -48,7 +53,7 @@ namespace Adventure
             } while (player.Lives > 0 || playAgain == "yes");
             if (player.Lives > 0)
             {
-            Console.WriteLine("Winner!1!1!");
+            Console.WriteLine("*----------* Y O U  W I N *----------*");
             }
 
             //    int moni = 10;
