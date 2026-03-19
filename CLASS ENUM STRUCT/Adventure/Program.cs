@@ -12,16 +12,17 @@ namespace Adventure
             //     Andmeväljadel on: Lives, Health, Location (struct kus on X ja Y), Backpack, Money
             //     Vaikeväärtused on Lives (3) ja Health (100)
             Random rng = new Random();
-            Player player = new Player (3, 100, new PlayerLocation(0,0), new List<string>(), 0);
             string playAgain = "yes";
             Console.WriteLine("Welcome, press any button to play.");
             Console.ReadLine();
-            World map = new World("helloworld", player.Location, new PlayerLocation(6,8));
+            World map = new World("helloworld", new PlayerLocation(3,9), new PlayerLocation(6,8));
+            Player player = new Player (3, 100, map.StartingPoint , new List<string>(), 0);
             do
             {
                 Console.Clear();
                 Console.WriteLine("----------Your current stats----------");
                 player.DisplayStats();
+                bool didPlayerWin = EventSystem.CheckWin(player.Location, map.Goal);
                 EventSystem.NextEncounter(player,map, rng);
                 EventSystem.NextLocation(player, map);
                 Console.WriteLine("\nPress any button to continue.");
@@ -45,6 +46,10 @@ namespace Adventure
                 }
 
             } while (player.Lives > 0 || playAgain == "yes");
+            if (player.Lives > 0)
+            {
+            Console.WriteLine("Winner!1!1!");
+            }
 
             //    int moni = 10;
             //    int elud = 3;

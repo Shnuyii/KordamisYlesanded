@@ -23,7 +23,7 @@ namespace Adventure
         /// <param name="end"></param>
         public World(int[,] thisMap, string thisWorldName, PlayerLocation start, PlayerLocation end)
         {
-            Map = NewMap(10, 5);
+            Map = NewMap(10, 6);
             WorldName = thisWorldName;
             StartingPoint = start;
             Goal = end;

@@ -283,7 +283,7 @@ namespace Adventure
         /// <returns>new value to set player at.</returns>
         private static int CheckCandidate(int maxvalue, int playerFutureLocation, bool checkMinimum = false)
         {
-            if (checkMinimum = false)
+            if (checkMinimum == false)
             {
                 if (playerFutureLocation > int.MaxValue)
                 {
@@ -308,6 +308,18 @@ namespace Adventure
                 {
                     return playerFutureLocation;
                 }
+            }
+        }
+
+        internal static bool CheckWin(PlayerLocation location, PlayerLocation goal)
+        {
+            if (location.ToString() == goal.ToString())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
