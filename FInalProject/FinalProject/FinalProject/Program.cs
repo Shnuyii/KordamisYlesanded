@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.IO;
+using System.ComponentModel.DataAnnotations;
 
 namespace FinalProject
 {
@@ -6,8 +8,8 @@ namespace FinalProject
     {
         static void Main(string[] args)
         {
-            /*	
-    	        B
+            /*
+                B
             - Kontserdipiletiprogramm
             - - user klass on, tal on email username ja parool
             - - registreeritakse emailiga (kontrolli et on @)
@@ -20,14 +22,14 @@ namespace FinalProject
             - kasutaja saab vaadata ainult oma check-initud evente
 
             = koodinõuded Variandile A ja B:
-            - muutujad,
+            - muutujad
             - tingimuslaused
             - tsüklid
             - meetodid
             - klassid
             - liht ja komposiitandmetüübid
 
-            AIkasutus ja kopipasta kellegi teise pealt ei ole kopipasta lubatud.
+            AIkasutus ja kopipasta kellegi teise pealt ei ole lubatud.
 
             Konspekt ja Stackoverflow ON LUBATUD */
             User account = new User();
@@ -36,20 +38,30 @@ namespace FinalProject
             account.password = "";
             //List<string> validEmails = new List<string>() {"@example.com","@gmail.com","@local.com" };
             Console.WriteLine("Welcome!\nWould you like to log in or register a new account?");
-            string userInput = GetString();
+            string userInput = GetLogin();
             if (userInput == "register")
             {
                 Console.WriteLine("Great, lets get you started then!");
-                RegisterAccount(account.email, account.userName, account.password/*, validEmails*/);
+                RegisterAccount(account.email, account.userName, account.password/*, validEmails*/); // validEmails ei tööta, ei oska lahendada
+                Console.WriteLine("Would you like to log in now?");
+                string answer = GetString();
+                if (answer == "yes" || answer == "log in")
+                {
+                    Console.WriteLine("Great, lets log you in then!");
+                }
             }
             else if (userInput == "log in")
             {
+                LoginSystem(account.userName, account.password);
+            }
+        }
 
-            }
-            else
-            {
-                userInput = GetString();
-            }
+        private static void LoginSystem(string userName, string password)
+        {
+            Console.WriteLine("Enter your username:");
+            userName = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("Enter your password:");
+            password = Console.ReadLine() ?? string.Empty;
         }
 
         private static void RegisterAccount(string email, string username, string password/*, List<string> validEmails*/)
@@ -57,23 +69,42 @@ namespace FinalProject
             do
             {
                 Console.WriteLine("To register an account, first please enter a valid email:");
-                email = Console.ReadLine();
-            } while (!email.Contains("@example.com") || email.Contains("@gmail.com"));
+                email = Console.ReadLine()?.Trim() ?? string.Empty;
+            } while (!email.Contains("@"));
+
             do
             {
-                Console.WriteLine("Enter your password:");
-                password = Console.ReadLine();
-            } while (!password.Length)
+                Console.WriteLine("A password must contain 5 or more letters at least. Enter your password:");
+                password = Console.ReadLine() ?? string.Empty;
+            } while (password.Length < 5);
+
+            Console.WriteLine("Enter your username:");
+            username = Console.ReadLine()?.Trim() ?? string.Empty;
+
+            string line = $"{email},\n{username},\n{password}"/*{Environment.NewLine}*/;
+
+            File.AppendAllText("RegisteredAccounts.txt", line);
+        }
+
+        private static string GetLogin()
+        {
+            string input = string.Empty;
+            do
+            {
+                Console.WriteLine("Enter the action register or log in to continue:");
+                input = (Console.ReadLine() ?? string.Empty).Trim().ToLower();
+            } while (input != "register" && input != "log in");
+            return input;
         }
 
         private static string GetString()
         {
-            string input = "";
+            string input = string.Empty;
             do
             {
-                Console.WriteLine("Enter the action:");
-                input = Console.ReadLine();
-            } while (!input.Contains("register") || input.Contains("log in"));
+                Console.WriteLine("Enter yes/no or log in to continue:");
+                input = (Console.ReadLine() ?? string.Empty).Trim().ToLower();
+            } while (input != "yes" && input != "no" && input != "log in");
             return input;
         }
     }

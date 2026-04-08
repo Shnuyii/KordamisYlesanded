@@ -1,11 +1,14 @@
-﻿using System;
+﻿using FinalProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
+//- -user klass on, tal on email username ja parool
+
 namespace FinalProject
 {
-    internal class User
+    public class User
     {
         public string userName = "";
         public string email = "";
