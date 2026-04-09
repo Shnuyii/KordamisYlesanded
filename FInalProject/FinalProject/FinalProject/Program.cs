@@ -6,7 +6,7 @@ namespace FinalProject
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             /*
                 B
@@ -32,6 +32,7 @@ namespace FinalProject
             AIkasutus ja kopipasta kellegi teise pealt ei ole lubatud.
 
             Konspekt ja Stackoverflow ON LUBATUD */
+            Console.ResetColor();
             User account = new User();
             account.userName = "";
             account.email = "";
@@ -41,13 +42,16 @@ namespace FinalProject
             string userInput = GetLogin();
             if (userInput == "register")
             {
+                Console.Clear();
                 Console.WriteLine("Great, lets get you started then!");
                 RegisterAccount(account.email, account.userName, account.password/*, validEmails*/); // validEmails ei tööta, ei oska lahendada
                 Console.WriteLine("Would you like to log in now?");
                 string answer = GetString();
                 if (answer == "yes" || answer == "log in")
                 {
+                    Console.Clear();
                     Console.WriteLine("Great, lets log you in then!");
+                    LoginSystem(account.userName,account.password);
                 }
             }
             else if (userInput == "log in")
@@ -58,32 +62,61 @@ namespace FinalProject
 
         private static void LoginSystem(string userName, string password)
         {
+            Thread.Sleep(250);
+            Console.Clear();
             Console.WriteLine("Enter your username:");
-            userName = Console.ReadLine() ?? string.Empty;
+            userName = Console.ReadLine() ?? string.Empty; // ?? string.empty küsib uuesti kui string on tühi
             Console.WriteLine("Enter your password:");
             password = Console.ReadLine() ?? string.Empty;
+            string line = $"{password}, {userName}";
+            if (File.Exists("RegisteredAccounts.txt") && File.ReadAllLines("RegisteredAccounts.txt").Contains(line))
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine($"You have now logged in. Welcome {userName}.");
+                System.Threading.Thread.Sleep(2500);
+                Event.LoggedIn(userName);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Login failed, try again.");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Damn.");
+                Console.ResetColor();
+            }
         }
 
         private static void RegisterAccount(string email, string username, string password/*, List<string> validEmails*/)
         {
-            do
+            string controlLine = $"{password}, {username}";
+                do
+                {
+                    Console.WriteLine("To register an account, first please enter a valid email:");
+                    email = Console.ReadLine()?.Trim() ?? string.Empty;
+                } while (!email.Contains("@"));
+
+                do
+                {
+                    Console.WriteLine("A password must contain 5 or more letters at least. Enter your password:");
+                    password = Console.ReadLine() ?? string.Empty;
+                } while (password.Length < 5);
+
+                Console.WriteLine("Enter your username:");
+                username = Console.ReadLine()?.Trim() ?? string.Empty;
+            if (!File.ReadAllLines("RegisteredAccounts.txt").Contains(controlLine))
             {
-                Console.WriteLine("To register an account, first please enter a valid email:");
-                email = Console.ReadLine()?.Trim() ?? string.Empty;
-            } while (!email.Contains("@"));
+                string line1 = $"{email}\n";
+                string line2 = $"{password}\n";
+                string line3 = $"{username}\n";
+                string allLines = $"{email} \n{password}, {username}\n";
 
-            do
-            {
-                Console.WriteLine("A password must contain 5 or more letters at least. Enter your password:");
-                password = Console.ReadLine() ?? string.Empty;
-            } while (password.Length < 5);
-
-            Console.WriteLine("Enter your username:");
-            username = Console.ReadLine()?.Trim() ?? string.Empty;
-
-            string line = $"{email},\n{username},\n{password}"/*{Environment.NewLine}*/;
-
-            File.AppendAllText("RegisteredAccounts.txt", line);
+                File.AppendAllText("RegisteredEmail.txt", line1);
+                File.AppendAllText("RegisteredPasswords.txt", line2);
+                File.AppendAllText("RegisteredUsernames.txt", line3);
+                File.AppendAllText("RegisteredAccounts.txt", allLines);
+                Console.WriteLine("Account registered successfully.");
+            }
+            //User.ExistingAccounts(line1, line2, line3);
         }
 
         private static string GetLogin()

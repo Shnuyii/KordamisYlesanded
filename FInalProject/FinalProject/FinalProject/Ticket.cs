@@ -19,7 +19,7 @@ namespace FinalProject
             VIP,
             EarlyBird
         }
-        public enum eventType
+        public enum EventType
         {
             Rock,
             Jazz,

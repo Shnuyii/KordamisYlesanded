@@ -13,9 +13,11 @@ namespace FinalProject
         public string userName = "";
         public string email = "";
         public string password = "";
-        static void ExistingAccounts(string email, string userName, string password)
-        {
-            File.Create("RegisteredAccounts.txt");
-        }
+        //public static void ExistingAccounts(string email, string password, string userName)
+        //{
+        //    File.Create("RegisteredAccounts.txt");
+        //    File.AppendAllText("RegisteredAccounts.txt", email, password, userName);
+
+        //}
     }
 }
